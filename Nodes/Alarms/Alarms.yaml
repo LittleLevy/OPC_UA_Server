@@ -1,0 +1,91 @@
+Name: Alarms
+Id: g=46d38425dd3f44b0b8648c11eb13a325
+Type: FolderType
+Children:
+- Name: DigitalAlarm1
+  Id: g=cb8b7922e11b2b0b1fca72c0db38ea67
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=a2c5147d5c3b7bc8698c0034cf339be6
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=5841cc8b024553252deddc9e486d676f
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=c0a1538d653cb3a6902d3c61cd3a423b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable1"
+      Children:
+      - Name: Mode
+        Id: g=1c0bb388bbd80d3b65fe1f13a76f7f5b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=70699c0a5ecdf15a175648d4645d5087
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=14;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=14;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=14;i=83
+    Direction: Forward
+- Name: ExclusiveLevelAlarm1
+  Id: g=db4b60e81771c261141e3712c224c5f0
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=a9e2023b99b1c7ec9c5a6e6de05daa07
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=919f5a05abcb00579f7c87c2d4813b37
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable2"
+      Children:
+      - Name: Mode
+        Id: g=949d46434b0d91ee434545c2d3ebd47b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=a0e6cec3d5541f855691ccd159f1b238
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=14;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=14;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=14;i=83
+    Direction: Forward
+  - Name: HighHighLimit
+    Id: g=0985419bafca1ddd30b224491215bb12
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 10.0
+  - Name: LowLowLimit
+    Id: g=adafdcb7abd99d27b5f1af153cb76699
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -10.0
